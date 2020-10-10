@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap')
+
+*
+  box-sizing: border-box
+
+body, #masterContainer
+  background-color: #E0E5EC
+
+  /* GATEWAY */
+  #gatewayContainer
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 100vh
+    width: 100vw
+    position: relative
+    z-index: 10
+
+
+
+    #gatewayButton
+      border: 0
+      font-family: 'Inconsolata', monospace
+      font-size: 2rem
+      border-radius: 3px
+      background-color: #E0E5EC
+      box-shadow: -7px -7px 10px #FEFEFE, 7px 7px 10px #c0cad7
+      padding: 1rem
+      outline: none
+
+      &:active
+        box-shadow: inset -9px -9px 16px #FEFEFE, inset 9px 9px 16px #c0cad7
+        color: #393939
+
+  /* LIBRARY */
+  #libraryContainer
+    display: none
+    background-color: red
+    height: 100vh
+    width: 100vw
