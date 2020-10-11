@@ -4,33 +4,33 @@ import "./App.css";
 import $ from "jquery";
 
 import Gateway from "./components/gateway.js";
+import Nav from "./components/nav.js";
 import Library from "./components/library.js";
 
 //jquery functions
 $(document).ready(() => {
   $("#gatewayButton").on("click", () => {
-    $("#gatewayContainer").fadeOut(2000, () => {
-      $(".book-container").animate({ opacity: 1 }, 5000, () => {
-        $(".book-cover").fadeIn(5000);
+    $("#gatewayContainer").fadeOut(3000, () => {
+      $("#libraryContainer, #navContainer").fadeIn(3000, () => {
+        $(".book-cover, #leaveText").fadeIn(3000);
+      });
+    });
+  });
+
+  $("#leaveLibraryButton").on("click", () => {
+    $(".book-cover, #leaveText").fadeOut(3000, () => {
+      $("#libraryContainer, #navContainer").fadeOut(3000, () => {
+        $("#gatewayContainer").fadeIn(3000);
       });
     });
   });
 });
 
-// $(document).ready(() => {
-//   $("#gatewayButton").on("click", () => {
-//     $("#gatewayContainer").fadeOut(2000, () => {
-//       $(".book-cover").fadeIn(5000, () => {
-//         $(".book-container").addClass("materialize");
-//       });
-//     });
-//   });
-// });
-
 function App() {
   return (
     <div id="masterContainer">
       <Gateway />
+      <Nav />
       <Library />
     </div>
   );

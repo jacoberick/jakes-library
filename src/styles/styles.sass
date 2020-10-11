@@ -3,6 +3,7 @@
 $background: #E0E5EC
 $highlight: #FEFEFE
 $shadow: #c0cad7
+$pressedText: #393939
 
 *
   box-sizing: border-box
@@ -17,15 +18,12 @@ body, #masterContainer
     align-items: center
     height: 100vh
     width: 100vw
-    position: relative
-    z-index: 10
-    // display: none
 
     #gatewayButton
       border: 0
       font-family: 'Inconsolata', monospace
       font-size: 2rem
-      border-radius: 3px
+      border-radius: 7px
       background-color: $background
       box-shadow: -7px -7px 10px $highlight, 7px 7px 10px $shadow
       padding: 1rem
@@ -34,29 +32,61 @@ body, #masterContainer
 
       &:active
         box-shadow: inset -9px -9px 16px $highlight, inset 9px 9px 16px $shadow
-        color: #393939
+        color: $pressedText
 
   /* LIBRARY */
   #libraryContainer
-    height: 100vh
-    width: 65vw
-    margin: 0 auto
-    display: flex
-    justify-content: space-around
-    align-items: center
-    flex-wrap: wrap
+    display: none
 
-    .book-container
+    #libraryInner
+      height: 100vh
+      width: 65vw
+      margin: 0 auto
       display: flex
-      justify-content: center
+      justify-content: space-around
       align-items: center
-      height: 15rem
-      width: 10rem
-      background-color: $background
-      box-shadow: -7px -7px 10px $highlight, 7px 7px 10px $shadow
-      cursor: pointer
-      opacity: 0
+      flex-wrap: wrap
 
-      .book-cover
-        width: 7rem
+      .book-container
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 15rem
+        width: 10rem
+        background-color: $background
+        box-shadow: -7px -7px 10px $highlight, 7px 7px 10px $shadow
+        border-radius: 5px
+        cursor: pointer
+        margin-top: 2rem
+        margin-left: 1.5rem
+
+        .book-cover
+          width: 7rem
+          border-radius: 2px
+          display: none
+
+  #navContainer
+    display: none
+    position: absolute
+
+    #leaveLibraryButton
+      margin-left: 1rem
+      margin-top: 1rem
+      border: 0
+      background-color: $background
+      font-family: 'Inconsolata', monospace
+      font-size: 1.5rem
+      box-shadow: -7px -7px 10px $highlight, 7px 7px 10px $shadow
+      border-radius: 4px
+      width: 8rem
+      height: 4rem
+      cursor: pointer
+      outline: none
+
+      #leaveText
+        margin: 0
         display: none
+
+      &:active
+        box-shadow: inset -7px -7px 10px $highlight, inset 7px 7px 10px $shadow
+        color: $pressedText

@@ -20,19 +20,27 @@ const Library = () => {
       cover: "gulag.jpg",
       alt: "The Gulag Archipelago Book Cover",
     },
+    {
+      title: "Harry Potter and The Sorcerer's Stone",
+      author: "J.K. Rowling",
+      cover: "hp.jpg",
+      alt: "hp alt",
+    },
   ];
 
   return (
     <div id="libraryContainer">
-      {books.map((b, id) => (
-        <div key={id} className="book-container">
-          <img
-            className="book-cover"
-            src={require(`../assets/${b.cover}`)}
-            alt={b.alt}
-          />
-        </div>
-      ))}
+      <div id="libraryInner">
+        {books.map((b, id) => (
+          <div key={id} className="book-container">
+            <img
+              className="book-cover"
+              src={require(`../assets/${b.cover}`)}
+              alt={b.alt}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
