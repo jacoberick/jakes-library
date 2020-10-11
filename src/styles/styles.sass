@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap')
 
+$background: #E0E5EC
+$highlight: #FEFEFE
+$shadow: #c0cad7
+
 *
   box-sizing: border-box
 
 body, #masterContainer
-  background-color: #E0E5EC
+  background-color: $background
 
   /* GATEWAY */
   #gatewayContainer
@@ -15,43 +19,44 @@ body, #masterContainer
     width: 100vw
     position: relative
     z-index: 10
-    display: none
+    // display: none
 
     #gatewayButton
       border: 0
       font-family: 'Inconsolata', monospace
       font-size: 2rem
       border-radius: 3px
-      background-color: #E0E5EC
-      box-shadow: -7px -7px 10px #FEFEFE, 7px 7px 10px #c0cad7
+      background-color: $background
+      box-shadow: -7px -7px 10px $highlight, 7px 7px 10px $shadow
       padding: 1rem
       outline: none
+      cursor: pointer
 
       &:active
-        box-shadow: inset -9px -9px 16px #FEFEFE, inset 9px 9px 16px #c0cad7
+        box-shadow: inset -9px -9px 16px $highlight, inset 9px 9px 16px $shadow
         color: #393939
 
   /* LIBRARY */
   #libraryContainer
-    // display: none
+    height: 100vh
+    width: 65vw
+    margin: 0 auto
+    display: flex
+    justify-content: space-around
+    align-items: center
+    flex-wrap: wrap
 
-    #bookCase
-      height: 100vh
-      width: 65vw
-      margin: 0 auto
+    .book-container
       display: flex
-      justify-content: space-around
+      justify-content: center
       align-items: center
-      flex-wrap: wrap
+      height: 15rem
+      width: 10rem
+      background-color: $background
+      box-shadow: -7px -7px 10px $highlight, 7px 7px 10px $shadow
+      cursor: pointer
+      opacity: 0
 
-      .book-container
-        display: flex
-        justify-content: center
-        align-items: center
-        height: 15rem
-        width: 10rem
-        background-color: #E0E5EC
-        box-shadow: -9px -9px 16px #FEFEFE, 9px 9px 16px #c0cad7
-
-        img
-          width: 7rem
+      .book-cover
+        width: 7rem
+        display: none

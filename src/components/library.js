@@ -24,13 +24,15 @@ const Library = () => {
 
   return (
     <div id="libraryContainer">
-      <div id="bookCase">
-        {books.map((b, id) => (
-          <div key={id} className="book-container">
-            <img src={require(`../assets/${b.cover}`)} alt={b.alt} />
-          </div>
-        ))}
-      </div>
+      {books.map((b, id) => (
+        <div key={id} className="book-container">
+          <img
+            className="book-cover"
+            src={require(`../assets/${b.cover}`)}
+            alt={b.alt}
+          />
+        </div>
+      ))}
     </div>
   );
 };

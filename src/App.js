@@ -10,10 +10,22 @@ import Library from "./components/library.js";
 $(document).ready(() => {
   $("#gatewayButton").on("click", () => {
     $("#gatewayContainer").fadeOut(2000, () => {
-      $("#libraryContainer").fadeIn(4000);
+      $(".book-container").animate({ opacity: 1 }, 5000, () => {
+        $(".book-cover").fadeIn(5000);
+      });
     });
   });
 });
+
+// $(document).ready(() => {
+//   $("#gatewayButton").on("click", () => {
+//     $("#gatewayContainer").fadeOut(2000, () => {
+//       $(".book-cover").fadeIn(5000, () => {
+//         $(".book-container").addClass("materialize");
+//       });
+//     });
+//   });
+// });
 
 function App() {
   return (
