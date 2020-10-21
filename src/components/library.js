@@ -21,10 +21,16 @@ const Library = () => {
       alt: "The Gulag Archipelago Book Cover",
     },
     {
-      title: "Harry Potter and The Sorcerer's Stone",
-      author: "J.K. Rowling",
-      cover: "hp.jpg",
-      alt: "hp alt",
+      title: "Fahrenheit 451",
+      author: "Ray Bradbury",
+      cover: "451.jpg",
+      alt: "Fahrenheit 451 Book Cover",
+    },
+    {
+      title: "The Giver",
+      author: "Louis Lowry",
+      cover: "giver.jpg",
+      alt: "The Giver Book Cover",
     },
   ];
 
