@@ -1,9 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Gateway = () => {
   return (
     <div id="gatewayContainer">
-      <button id="gatewayButton">Enter the library.</button>
+      <Link to="/library" id="gatewayButton">
+        Enter the library.
+      </Link>
     </div>
   );
 };

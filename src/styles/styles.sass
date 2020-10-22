@@ -29,6 +29,8 @@ body, #masterContainer
       padding: 1rem
       outline: none
       cursor: pointer
+      text-decoration: none
+      color: #121212
 
       &:active
         box-shadow: inset -9px -9px 16px $highlight, inset 9px 9px 16px $shadow
@@ -36,7 +38,6 @@ body, #masterContainer
 
   /* LIBRARY */
   #libraryContainer
-    display: none
 
     #libraryInner
       height: 100vh
@@ -62,11 +63,10 @@ body, #masterContainer
         .book-cover
           width: 7rem
           border-radius: 2px
-          display: none
 
   #navContainer
-    display: none
     position: absolute
+    top: 2rem
 
     #leaveLibraryButton
       margin-left: 1rem
@@ -77,14 +77,14 @@ body, #masterContainer
       font-size: 1.5rem
       box-shadow: -7px -7px 10px $highlight, 7px 7px 10px $shadow
       border-radius: 4px
-      width: 8rem
-      height: 4rem
       cursor: pointer
       outline: none
+      text-decoration: none
+      padding: 1rem
+      color: #121212
 
       #leaveText
         margin: 0
-        display: none
 
       &:active
         box-shadow: inset -7px -7px 10px $highlight, inset 7px 7px 10px $shadow

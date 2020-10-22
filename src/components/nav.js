@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
     <div id="navContainer">
-      <button id="leaveLibraryButton">
-        <p id="leaveText">Leave the library.</p>
-      </button>
+      <Link to="/" id="leaveLibraryButton">
+        Leave the library
+      </Link>
     </div>
   );
 };
