@@ -1,7 +1,8 @@
 import React from "react";
 
-const Modal = () => {
-  return;
+const Book = ({book}) => {
+  console.log(book);
+  return null;
 };
 
-export default Modal;
+export default Book;
