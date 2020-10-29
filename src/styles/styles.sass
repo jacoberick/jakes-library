@@ -89,3 +89,66 @@ body, #masterContainer
       &:active
         box-shadow: inset -7px -7px 10px $highlight, inset 7px 7px 10px $shadow
         color: $pressedText
+
+  #detailContainer
+    display: flex
+    justify-content: space-around
+    align-items: center
+    height: 100vh
+    padding: 0 5rem 0 5rem
+
+    .left-detail
+      width: 50%
+      display: flex
+      justify-content: center
+
+      .detail-book-cover
+        width: 20rem
+        padding: 20px
+        border-radius: 5px
+        box-shadow: -7px -7px 10px $highlight, 7px 7px 10px $shadow
+
+
+    .right-detail
+      width: 50%
+      height: 100%
+
+      .right-detail-inner
+        padding-top: 4rem
+
+        .detail--top
+          display: flex
+          justify-content: space-around
+
+          .title-author-container
+            width: 50%
+            font-family: 'Inconsolata', monospace
+            display: flex
+            justify-content: center
+            flex-direction: column
+            align-items: center
+            text-align: center
+
+            h1
+              font-size: 4rem
+              margin: 0
+
+          .author-portrait-container
+            padding: 20px
+            display: flex
+            justify-content: center
+            border-radius: 5px
+            box-shadow: -7px -7px 10px $highlight, 7px 7px 10px $shadow
+
+            img
+              width: 10rem
+
+        .detail--bottom
+          margin-top: 3rem
+          padding: 0 5rem 0 5rem
+          text-align: center
+          font-family: 'Inconsolata', monospace
+
+          p
+            margin-top: 2rem
+            font-size: 1.3rem

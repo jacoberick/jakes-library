@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Nav = () => {
+const ExitButton = ({ text, path }) => {
   return (
     <div id="navContainer">
-      <Link to="/" id="leaveLibraryButton">
-        Leave the library
+      <Link to={`/${path}`} id="leaveLibraryButton">
+        {text}
       </Link>
     </div>
   );
 };
 
-export default Nav;
+export default ExitButton;
