@@ -10,7 +10,7 @@ const Library = ({ books, selectBook }) => {
   };
 
   return (
-    <div id="libraryContainer">
+    <div className="library--container">
       <div id="libraryInner">
         {books.map((b) => (
           <div

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useParams, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 const Book = ({ book, queryBook, match }) => {
   useEffect(() => {

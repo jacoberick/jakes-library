@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { HashRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { CSSTransition } from "react-transition-group";
 import "./App.css";
 
 import Gateway from "./components/gateway.js";
@@ -8,6 +9,7 @@ import Library from "./components/library.js";
 import Book from "./components/book.js";
 
 function App() {
+  //BOOK STATE MANAGMENT
   const [book, selectBook] = useState(null);
   const books = [
     {
@@ -65,7 +67,7 @@ function App() {
     {
       id: 5,
       title: "The Giver",
-      author: "Louis Lowry",
+      author: "Lois Lowry",
       cover: "giver.jpg",
       authorPortrait: "lois.jpg",
       portraitAlt: "Portrait of The Giver",
@@ -82,24 +84,40 @@ function App() {
     selectBook(foundBook);
   };
 
+  const nodeRef = React.useRef(null);
+
   return (
-    <HashRouter basename="/">
+    <Router>
       <div id="masterContainer">
-        <Switch>
-          <Route exact path="/">
-            <Gateway />
-          </Route>
-          <Route path="/library/:id">
-            <ExitButton text="Back to library" path="library" />
-            <Book book={book} queryBook={queryBook} />
-          </Route>
-          <Route path="/library">
-            <ExitButton text="Leave the library" path="" />
-            <Library books={books} selectBook={selectBook} />
-          </Route>
-        </Switch>
+        {/* GATEWAY ROUTE*/}
+        <Route exact path="/">
+          {({ match }) => (
+            <CSSTransition
+              nodeRef={nodeRef}
+              in={match != null}
+              timeout={1000}
+              classNames={"gateway--container"}
+              unmountOnExit={true}
+            >
+              <Gateway nodeRef={nodeRef} />
+            </CSSTransition>
+          )}
+        </Route>
+
+        {/* BOOK ROUTE*/}
+        <Route path="/library/:id">
+          <ExitButton text="Back to library" path="library" />
+          <Book book={book} queryBook={queryBook} />
+        </Route>
+
+        {/* LIBRARY ROUTE*/}
+        <Route exact path="/library">
+          {/*<ExitButton text="Leave the library" path="" />*/}
+
+          <Library books={books} selectBook={selectBook}></Library>
+        </Route>
       </div>
-    </HashRouter>
+    </Router>
   );
 }
 

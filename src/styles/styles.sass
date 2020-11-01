@@ -12,7 +12,7 @@ body, #masterContainer
   background-color: $background
 
   /* GATEWAY */
-  #gatewayContainer
+  .gateway--container
     display: flex
     justify-content: center
     align-items: center
@@ -36,8 +36,26 @@ body, #masterContainer
         box-shadow: inset -9px -9px 16px $highlight, inset 9px 9px 16px $shadow
         color: $pressedText
 
+  .gateway--container-enter
+    opacity: 0
+
+  .gateway--container-enter-active
+    opacity: 1
+    transition: opacity 1s
+
+  .gateway--container-exit
+    opacity: 1
+
+  .gateway--container-exit-active
+    opacity: 0
+    transition: opacity 1s
+
+  .gateway--container-exit-done
+    opacity: 0
+
   /* LIBRARY */
-  #libraryContainer
+  .library--container
+
 
     #libraryInner
       height: 100vh
@@ -64,6 +82,7 @@ body, #masterContainer
           width: 7rem
           border-radius: 2px
 
+  /*NAV*/
   #navContainer
     position: absolute
     top: 2rem
@@ -90,6 +109,7 @@ body, #masterContainer
         box-shadow: inset -7px -7px 10px $highlight, inset 7px 7px 10px $shadow
         color: $pressedText
 
+  /*BOOK DETAIL*/
   #detailContainer
     display: flex
     justify-content: space-around

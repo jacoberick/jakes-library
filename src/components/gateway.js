@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Gateway = () => {
+const Gateway = ({ nodeRef }) => {
   return (
-    <div id="gatewayContainer">
+    <div className="gateway--container" ref={nodeRef}>
       <Link to="/library" id="gatewayButton">
         Enter the library.
       </Link>
