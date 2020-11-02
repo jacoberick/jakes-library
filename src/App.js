@@ -112,8 +112,7 @@ function App() {
 
         {/* LIBRARY ROUTE*/}
         <Route exact path="/library">
-          {/*<ExitButton text="Leave the library" path="" />*/}
-
+          <ExitButton text="Leave the library" path="" />
           <Library books={books} selectBook={selectBook}></Library>
         </Route>
       </div>
