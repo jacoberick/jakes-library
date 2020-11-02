@@ -70,12 +70,51 @@ function App() {
       author: "Lois Lowry",
       cover: "giver.jpg",
       authorPortrait: "lois.jpg",
-      portraitAlt: "Portrait of The Giver",
+      portraitAlt: "Portrait of Lois Lowry",
       alt: "The Giver Book Cover",
       descrip:
         "The Giver is a 1993 American young adult dystopian novel by Lois Lowry. It is set in a society which at first appears to be utopian but is revealed to be dystopian as the story progresses. The novel follows a 12-year-old boy named Jonas.",
       authorInfo:
         "Lois Lowry is an American writer. She is the author of several books for children and young adults, including The Giver Quartet and Number the Stars. She is known for writing about difficult subject matters and complex themes in works for young audiences.",
+    },
+    {
+      id: 6,
+      title: "The Giving Tree",
+      author: "Shel Silverstein",
+      cover: "givingTree.jpg",
+      authorPortrait: "shel.jpg",
+      portraitAlt: "Portrait of Shel Silverstein",
+      alt: "The Giving Tree Book Cover",
+      descrip:
+        "The Giving Tree is an American children's picture book written and illustrated by Shel Silverstein. First published in 1964 by Harper & Row, it has become one of Silverstein's best-known titles, and has been translated into numerous languages.",
+      authorInfo:
+        "Sheldon Allan Silverstein was an American writer known for his cartoons, songs, and children's books. He styled himself as Uncle Shelby in some works. His books have been translated into more than 30 languages and have sold more than 20 million copies.",
+    },
+    {
+      id: 7,
+      title: "12 Rules For Life",
+      author: "Jordan B. Peterson",
+      cover: "12.jpg",
+      authorPortrait: "jordan.jpg",
+      portraitAlt: "Portrait of Jordan Peterson",
+      alt: "12 Rules For Life Book Cover",
+      authorInfo:
+        "Jordan Bernt Peterson is a Canadian clinical psychologist and a professor of psychology at the University of Toronto. He began to receive widespread attention in the late 2010s for his views on cultural and political issues.",
+      descrip:
+        "12 Rules for Life: An Antidote to Chaos is a 2018 self-help book by Canadian clinical psychologist and psychology professor Jordan Peterson. It provides life advice through essays in abstract ethical principles, psychology, mythology, religion, and personal anecdotes.",
+    },
+    {
+      id: 7,
+      title: "Lord of the Flies",
+      author: "William Golding",
+      cover: "lord.jpg",
+      authorPortrait: "will.jpg",
+      portraitAlt: "Portrait of William Golding",
+      alt: "Lord of the Flies Book Cover",
+      descrip:
+        "Lord of the Flies is a 1954 novel by Nobel Prize-winning British author William Golding. The book focuses on a group of British boys stranded on an uninhabited island and their disastrous attempt to govern themselves.",
+      authorInfo:
+        "Sir William Gerald Golding, CBE FRSL was a British novelist, playwright, and poet. Best known for his debut novel Lord of the Flies, he would go on to publish another twelve volumes of fiction in his lifetime.",
     },
   ];
 
