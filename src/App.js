@@ -104,7 +104,7 @@ function App() {
         "12 Rules for Life: An Antidote to Chaos is a 2018 self-help book by Canadian clinical psychologist and psychology professor Jordan Peterson. It provides life advice through essays in abstract ethical principles, psychology, mythology, religion, and personal anecdotes.",
     },
     {
-      id: 7,
+      id: 8,
       title: "Lord of the Flies",
       author: "William Golding",
       cover: "lord.jpg",
@@ -151,8 +151,20 @@ function App() {
 
         {/* LIBRARY ROUTE*/}
         <Route exact path="/library">
-          <ExitButton text="Leave the library" path="" />
-          <Library books={books} selectBook={selectBook}></Library>
+          {({ match }) => (
+            <CSSTransition
+              nodeRef={nodeRef}
+              in={match != null}
+              timeout={1000}
+              classNames={"library--page"}
+              unmountOnExit={true}
+            >
+              <div className="library--page" nodeRef={nodeRef}>
+                <ExitButton text="Leave the library" path="" />
+                <Library books={books} selectBook={selectBook}></Library>
+              </div>
+            </CSSTransition>
+          )}
         </Route>
       </div>
     </Router>
