@@ -123,43 +123,37 @@ function App() {
     selectBook(foundBook);
   };
 
-  const nodeRef = React.useRef(null);
-
   return (
     <Router>
       <div id="masterContainer">
         {/* GATEWAY ROUTE*/}
         <Route exact path="/">
           {({ match }) => (
-            <CSSTransition
-              nodeRef={nodeRef}
-              in={match != null}
-              timeout={1000}
-              classNames={"gateway--container"}
-              unmountOnExit={true}
-            >
-              <Gateway nodeRef={nodeRef} />
+            <CSSTransition in={match != null} timeout={500} classNames="page" unmountOnExit>
+              <div className="page">
+                <Gateway />
+              </div>
             </CSSTransition>
           )}
         </Route>
 
         {/* BOOK ROUTE*/}
         <Route path="/library/:id">
-          <ExitButton text="Back to library" path="library" />
-          <Book book={book} queryBook={queryBook} />
+          {({ match }) => (
+            <CSSTransition in={match != null} timeout={500} classNames="library" unmountOnExit>
+              <div className="library">
+                <ExitButton text="Back to library" path="library" />
+                <Book book={book} queryBook={queryBook} />
+              </div>
+            </CSSTransition>
+          )}
         </Route>
 
         {/* LIBRARY ROUTE*/}
         <Route exact path="/library">
           {({ match }) => (
-            <CSSTransition
-              nodeRef={nodeRef}
-              in={match != null}
-              timeout={1000}
-              classNames={"library--page"}
-              unmountOnExit={true}
-            >
-              <div className="library--page" nodeRef={nodeRef}>
+            <CSSTransition in={match != null} timeout={500} classNames="page" unmountOnExit>
+              <div className="page">
                 <ExitButton text="Leave the library" path="" />
                 <Library books={books} selectBook={selectBook}></Library>
               </div>
