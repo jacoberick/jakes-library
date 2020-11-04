@@ -36,23 +36,6 @@ body, #masterContainer
         box-shadow: inset -9px -9px 16px $highlight, inset 9px 9px 16px $shadow
         color: $pressedText
 
-  .gateway--container-enter
-    opacity: 0
-
-  .gateway--container-enter-active
-    opacity: 1
-    transition: opacity 1s
-
-  .gateway--container-exit
-    opacity: 1
-
-  .gateway--container-exit-active
-    opacity: 0
-    transition: opacity 1s
-
-  .gateway--container-exit-done
-    opacity: 0
-
   /* LIBRARY */
   .library--container
     margin-top: 5rem
@@ -169,3 +152,55 @@ body, #masterContainer
           p
             margin-top: 2rem
             font-size: 1.3rem
+
+/*Page Transition Group*/
+.page-transition
+  position: absolute
+  width: 100%
+
+.page-transition-enter
+  opacity: 0
+
+.page-transition-enter-active
+  opacity: 0
+
+.page-transition-enter-done
+  opacity: 1
+  transition: opacity .5s
+
+.page-transition-exit
+  opacity: 1
+
+.page-transition-exit-active
+  opacity: 0
+  transition: opacity .5s
+
+/*Library Transition Group*/
+.book-transition
+  position: absolute
+  width: 100%
+
+.book-transition-enter
+  opacity: 0
+  top: 2rem
+  transform: scale(0.95)
+
+.book-transition-enter-active
+  opacity: 0
+  top: 2rem
+  transform: scale(0.95)
+
+.book-transition-enter-done
+  opacity: 1
+  top: 0
+  transform: scale(1)
+  transition: 0.5s
+
+.book-transition-exit
+  opacity: 1
+  transform: scale(1)
+
+.book-transition-exit-active
+  opacity: 0
+  transform: scale(0.8)
+  transition: 0.5s

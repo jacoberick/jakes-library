@@ -104,7 +104,7 @@ function App() {
         "12 Rules for Life: An Antidote to Chaos is a 2018 self-help book by Canadian clinical psychologist and psychology professor Jordan Peterson. It provides life advice through essays in abstract ethical principles, psychology, mythology, religion, and personal anecdotes.",
     },
     {
-      id: 7,
+      id: 8,
       title: "Lord of the Flies",
       author: "William Golding",
       cover: "lord.jpg",
@@ -123,8 +123,6 @@ function App() {
     selectBook(foundBook);
   };
 
-  const nodeRef = React.useRef(null);
-
   return (
     <Router>
       <div id="masterContainer">
@@ -132,27 +130,50 @@ function App() {
         <Route exact path="/">
           {({ match }) => (
             <CSSTransition
-              nodeRef={nodeRef}
               in={match != null}
-              timeout={1000}
-              classNames={"gateway--container"}
-              unmountOnExit={true}
+              timeout={500}
+              classNames="page-transition"
+              unmountOnExit
             >
-              <Gateway nodeRef={nodeRef} />
+              <div className="page-transition">
+                <Gateway />
+              </div>
             </CSSTransition>
           )}
         </Route>
 
         {/* BOOK ROUTE*/}
         <Route path="/library/:id">
-          <ExitButton text="Back to library" path="library" />
-          <Book book={book} queryBook={queryBook} />
+          {({ match }) => (
+            <CSSTransition
+              in={match != null}
+              timeout={500}
+              classNames="book-transition"
+              unmountOnExit
+            >
+              <div className="book-transition">
+                <ExitButton text="Back to library" path="library" />
+                <Book book={book} queryBook={queryBook} />
+              </div>
+            </CSSTransition>
+          )}
         </Route>
 
         {/* LIBRARY ROUTE*/}
         <Route exact path="/library">
-          <ExitButton text="Leave the library" path="" />
-          <Library books={books} selectBook={selectBook}></Library>
+          {({ match }) => (
+            <CSSTransition
+              in={match != null}
+              timeout={500}
+              classNames="page-transition"
+              unmountOnExit
+            >
+              <div className="page-transition">
+                <ExitButton text="Leave the library" path="" />
+                <Library books={books} selectBook={selectBook}></Library>
+              </div>
+            </CSSTransition>
+          )}
         </Route>
       </div>
     </Router>
