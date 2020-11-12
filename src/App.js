@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HashRouter, Route } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import "./App.css";
 
@@ -124,7 +124,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <HashRouter basename="/">
       <div id="masterContainer">
         {/* GATEWAY ROUTE*/}
         <Route exact path="/">
@@ -176,7 +176,7 @@ function App() {
           )}
         </Route>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
