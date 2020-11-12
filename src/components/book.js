@@ -8,7 +8,7 @@ const Book = ({ book, queryBook, match }) => {
     }
   });
   return (
-    <div id="detailContainer">
+    <div className="detail-container">
       <div className="left-detail">
         {book && (
           <img
