@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/jakes-library/static/css/main.38c59ac5.chunk.css",
+    "main.js": "/jakes-library/static/js/main.2bc828e9.chunk.js",
+    "main.js.map": "/jakes-library/static/js/main.2bc828e9.chunk.js.map",
+    "runtime-main.js": "/jakes-library/static/js/runtime-main.643e01da.js",
+    "runtime-main.js.map": "/jakes-library/static/js/runtime-main.643e01da.js.map",
+    "static/js/2.3d478206.chunk.js": "/jakes-library/static/js/2.3d478206.chunk.js",
+    "static/js/2.3d478206.chunk.js.map": "/jakes-library/static/js/2.3d478206.chunk.js.map",
+    "index.html": "/jakes-library/index.html",
+    "precache-manifest.480447cdfc0e1a8209d69f44dd81b451.js": "/jakes-library/precache-manifest.480447cdfc0e1a8209d69f44dd81b451.js",
+    "service-worker.js": "/jakes-library/service-worker.js",
+    "static/css/main.38c59ac5.chunk.css.map": "/jakes-library/static/css/main.38c59ac5.chunk.css.map",
+    "static/js/2.3d478206.chunk.js.LICENSE.txt": "/jakes-library/static/js/2.3d478206.chunk.js.LICENSE.txt",
+    "static/media/12.jpg": "/jakes-library/static/media/12.f4a644a6.jpg",
+    "static/media/1984.jpg": "/jakes-library/static/media/1984.bcd9007e.jpg",
+    "static/media/451.jpg": "/jakes-library/static/media/451.7250f0ba.jpg",
+    "static/media/aleks.jpg": "/jakes-library/static/media/aleks.ccb6a6b4.jpg",
+    "static/media/anthem.jpg": "/jakes-library/static/media/anthem.2c203d29.jpg",
+    "static/media/aynRand.jpg": "/jakes-library/static/media/aynRand.765cb53c.jpg",
+    "static/media/georgeOrwell.jpg": "/jakes-library/static/media/georgeOrwell.bce156e6.jpg",
+    "static/media/giver.jpg": "/jakes-library/static/media/giver.834cb0e3.jpg",
+    "static/media/givingTree.jpg": "/jakes-library/static/media/givingTree.3e5b1eee.jpg",
+    "static/media/gulag.jpg": "/jakes-library/static/media/gulag.f515c892.jpg",
+    "static/media/hp.jpg": "/jakes-library/static/media/hp.e605309c.jpg",
+    "static/media/lois.jpg": "/jakes-library/static/media/lois.068740f7.jpg",
+    "static/media/lord.jpg": "/jakes-library/static/media/lord.77ec9369.jpg",
+    "static/media/ray.jpg": "/jakes-library/static/media/ray.2255a56c.jpg",
+    "static/media/shel.jpg": "/jakes-library/static/media/shel.517f3402.jpg",
+    "static/media/will.jpg": "/jakes-library/static/media/will.0368bbf9.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.643e01da.js",
+    "static/js/2.3d478206.chunk.js",
+    "static/css/main.38c59ac5.chunk.css",
+    "static/js/main.2bc828e9.chunk.js"
+  ]
+}
